@@ -1203,6 +1203,125 @@ def search():
     })
 
 
+@app.route('/api/keyword-preview', methods=['POST'])
+def keyword_preview():
+    """关键词预览接口 - 返回深度意图识别结果"""
+    data = request.get_json()
+    query = data.get('query', '').strip()
+    
+    if not query:
+        return jsonify({'success': False, 'message': '搜索查询不能为空'})
+    
+    try:
+        # 导入深度搜索Agent的搜索节点
+        from InsightEngine.nodes.search_node import FirstSearchNode
+        from InsightEngine.llms.base import LLMClient
+        from InsightEngine.utils.config import settings
+        
+        logger.info(f"开始导入深度意图识别模块")
+        
+        # 初始化LLM客户端（使用正确的配置）
+        llm_client = LLMClient(
+            api_key=settings.INSIGHT_ENGINE_API_KEY,
+            model_name=settings.INSIGHT_ENGINE_MODEL_NAME,
+            base_url=settings.INSIGHT_ENGINE_BASE_URL
+        )
+        logger.info(f"LLM客户端初始化成功")
+        
+        # 初始化首次搜索节点
+        search_node = FirstSearchNode(llm_client)
+        logger.info(f"搜索节点初始化成功")
+        
+        # 构建搜索输入（模拟段落结构）
+        search_input = {
+            "title": f"用户查询: {query}",
+            "content": f"用户希望了解关于'{query}'的舆情信息，请设计合适的搜索策略。"
+        }
+        
+        # 调用深度意图识别
+        logger.info(f"开始深度意图识别: {query}")
+        search_output = search_node.run(search_input)
+        logger.info(f"深度意图识别完成: {search_output}")
+        
+        # 提取意图识别结果
+        search_query = search_output.get('search_query', query)  # 优化后的搜索词
+        search_tool = search_output.get('search_tool', 'search_topic_globally')  # 选择的工具
+        reasoning = search_output.get('reasoning', '')  # 推理过程
+        
+        # 提取其他参数
+        start_date = search_output.get('start_date')
+        end_date = search_output.get('end_date')
+        platform = search_output.get('platform')
+        time_period = search_output.get('time_period')
+        
+        # 构建完整的意图识别结果
+        return jsonify({
+            'success': True,
+            'original_query': query,
+            'optimized_query': search_query,
+            'search_tool': search_tool,
+            'reasoning': reasoning,
+            'search_parameters': {
+                'start_date': start_date,
+                'end_date': end_date,
+                'platform': platform,
+                'time_period': time_period
+            },
+            'tool_description': _get_tool_description(search_tool),
+            'message': '深度意图识别成功'
+        })
+            
+    except Exception as e:
+        import traceback
+        error_details = traceback.format_exc()
+        logger.error(f"深度意图识别失败: {str(e)}")
+        logger.error(f"详细错误信息: {error_details}")
+        
+        # 备用方案：使用原来的关键词优化器
+        try:
+            from InsightEngine.tools.keyword_optimizer import KeywordOptimizer
+            optimizer = KeywordOptimizer()
+            result = optimizer.optimize_keywords(query)
+            
+            if result.success:
+                return jsonify({
+                    'success': True,
+                    'original_query': result.original_query,
+                    'optimized_query': query,  # 备用方案不使用优化后的查询
+                    'optimized_keywords': result.optimized_keywords,
+                    'search_tool': 'search_topic_globally',
+                    'reasoning': result.reasoning + ' (备用方案)',
+                    'search_parameters': {},
+                    'tool_description': _get_tool_description('search_topic_globally'),
+                    'message': '深度意图识别失败，使用关键词优化备用方案'
+                })
+        except Exception as fallback_error:
+            logger.error(f"备用方案也失败: {str(fallback_error)}")
+        
+        return jsonify({
+            'success': False,
+            'message': f'深度意图识别失败: {str(e)}',
+            'original_query': query,
+            'optimized_query': query,
+            'search_tool': 'search_topic_globally',
+            'reasoning': '',
+            'search_parameters': {},
+            'tool_description': _get_tool_description('search_topic_globally')
+        })
+
+def _get_tool_description(tool_name: str) -> str:
+    """获取搜索工具的描述"""
+    tool_descriptions = {
+        'search_hot_content': '查找热点内容 - 挖掘当前最受关注的舆情事件和话题',
+        'search_topic_globally': '全局话题搜索 - 全面了解公众对特定话题的讨论和观点',
+        'search_topic_by_date': '按日期搜索 - 追踪舆情事件的时间线发展和公众情绪变化',
+        'get_comments_for_topic': '获取话题评论 - 深度挖掘网民的真实态度、情感和观点',
+        'search_topic_on_platform': '平台定向搜索 - 分析特定社交平台用户群体的观点特征',
+        'analyze_sentiment': '情感分析 - 对文本内容进行专门的情感倾向分析'
+    }
+    return tool_descriptions.get(tool_name, '未知搜索工具')
+
+
 @app.route('/api/config', methods=['GET'])
 def get_config():
     """Expose selected configuration values to the frontend."""

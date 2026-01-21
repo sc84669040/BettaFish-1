@@ -373,3 +373,78 @@ ModuleNotFoundError: No module named 'asyncpg'
 解决方法: pip install weasyprint
 2026-01-18 17:08:24.463 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
 2026-01-18 17:08:24.463 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-21 19:43:16.946 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-21 19:43:26.135 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-21 19:43:26.136 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-21 19:43:26.138 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-21 19:43:26.139 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-21 19:43:26.143 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-21 19:43:26.150 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-21 19:43:26.163 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 4, 'media': 3, 'query': 4}
+2026-01-21 19:43:26.167 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-21 19:43:26.173 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-21 19:43:26.178 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-21 19:43:26.417 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-21 19:43:26.418 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-21 19:43:26.419 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-21 20:10:24.922 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-21 20:10:32.237 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-21 20:10:32.238 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-21 20:10:32.238 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-21 20:10:32.239 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-21 20:10:32.239 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-21 20:10:32.240 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-21 20:10:32.245 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 4, 'media': 3, 'query': 4}
+2026-01-21 20:10:32.251 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-21 20:10:32.252 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-21 20:10:32.253 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-21 20:10:32.440 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-21 20:10:32.441 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-21 20:10:32.441 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-21 20:11:16.363 | INFO     | __main__:keyword_preview:1221 - 开始导入深度意图识别模块
+2026-01-21 20:11:17.992 | INFO     | __main__:keyword_preview:1229 - LLM客户端初始化成功
+2026-01-21 20:11:17.993 | INFO     | __main__:keyword_preview:1233 - 搜索节点初始化成功
+2026-01-21 20:11:17.994 | INFO     | __main__:keyword_preview:1242 - 开始深度意图识别: 西贝和罗永浩事件是怎么回事
+2026-01-21 20:13:08.259 | INFO     | __main__:keyword_preview:1244 - 深度意图识别完成: {'search_query': '西贝和罗永浩怎么了', 'reasoning': "选择全局话题搜索工具(search_topic_globally)，覆盖微博、抖音、B站等多平台，全面获取网民对该事件的讨论；搜索词'西贝和罗永浩怎么了'采用口语化、含疑问情感的网民真实表达，避免官方术语，能捕捉真实民意；启用自动情感分析(enable_sentiment: true)以识别整体情绪变化。"}
+2026-01-21 20:28:54.081 | INFO     | __main__:keyword_preview:1221 - 开始导入深度意图识别模块
+2026-01-21 20:28:55.476 | INFO     | __main__:keyword_preview:1229 - LLM客户端初始化成功
+2026-01-21 20:28:55.477 | INFO     | __main__:keyword_preview:1233 - 搜索节点初始化成功
+2026-01-21 20:28:55.477 | INFO     | __main__:keyword_preview:1242 - 开始深度意图识别: ??????????
+2026-01-21 20:30:43.574 | INFO     | __main__:keyword_preview:1244 - 深度意图识别完成: {'search_query': '最近有什么新瓜吃', 'reasoning': "由于用户查询主题被表示为'??????????'（未知或不明确），选择search_hot_content工具可自动挖掘过去24小时的真实热门舆情事件和话题，避免依赖具体关键词。搜索词'最近有什么新瓜吃' 使用了网民的日常口语表达，'吃瓜' 模仿网友围观热点事件的习惯语，简单、接地气、融入情感词汇，能捕捉公众热议的真实声音和情感波动。"}
+2026-01-21 20:31:48.905 | INFO     | __main__:keyword_preview:1221 - 开始导入深度意图识别模块
+2026-01-21 20:31:50.515 | INFO     | __main__:keyword_preview:1229 - LLM客户端初始化成功
+2026-01-21 20:31:50.517 | INFO     | __main__:keyword_preview:1233 - 搜索节点初始化成功
+2026-01-21 20:31:50.518 | INFO     | __main__:keyword_preview:1242 - 开始深度意图识别: 西贝罗永浩事件
+2026-01-21 20:33:38.993 | INFO     | __main__:keyword_preview:1244 - 深度意图识别完成: {'search_query': '西贝老罗事件咋回事', 'reasoning': "选择全局话题搜索工具能全面覆盖微博热搜、知乎问答、B站弹幕等多平台讨论。搜索词'西贝老罗事件咋回事'用口语化疑问句和昵称'老罗'，符合网友吃瓜时真实表达，避免官方术语；'咋回事'自带情绪指向，利于挖掘吐槽、站队等原生态观点。默认开启情感分析可同步获取情绪分布。"}
+2026-01-21 20:38:58.275 | INFO     | __main__:_log_shutdown_step:537 - [Shutdown] 开始串行清理子进程
+2026-01-21 20:38:58.275 | INFO     | __main__:_log_shutdown_step:537 - [Shutdown] 正在停止 insight (pid=16752)
+2026-01-21 20:38:58.280 | INFO     | __main__:_log_shutdown_step:537 - [Shutdown] insight 退出完成，returncode=1
+2026-01-21 20:38:58.281 | INFO     | __main__:_log_shutdown_step:537 - [Shutdown] 正在停止 media (pid=3052)
+2026-01-21 20:38:58.285 | INFO     | __main__:_log_shutdown_step:537 - [Shutdown] media 退出完成，returncode=1
+2026-01-21 20:38:58.286 | INFO     | __main__:_log_shutdown_step:537 - [Shutdown] 正在停止 query (pid=43364)
+2026-01-21 20:38:58.291 | INFO     | __main__:_log_shutdown_step:537 - [Shutdown] query 退出完成，returncode=1
+2026-01-21 20:38:58.292 | INFO     | __main__:stop_forum_engine:404 - ForumEngine: 停止论坛...
+2026-01-21 20:38:58.841 | INFO     | __main__:stop_forum_engine:406 - ForumEngine: 论坛已停止
+2026-01-21 20:38:58.842 | INFO     | __main__:_log_shutdown_step:537 - [Shutdown] 子进程清理完成
+2026-01-21 20:40:16.283 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-21 20:40:21.080 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-21 20:40:21.081 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-21 20:40:21.081 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-21 20:40:21.081 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-21 20:40:21.082 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-21 20:40:21.082 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-21 20:40:21.086 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 4, 'media': 3, 'query': 4}
+2026-01-21 20:40:21.088 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-21 20:40:21.089 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-21 20:40:21.090 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-21 20:40:21.273 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-21 20:40:21.274 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-21 20:40:21.275 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-21 20:41:30.048 | INFO     | __main__:keyword_preview:1221 - 开始导入深度意图识别模块
+2026-01-21 20:41:31.603 | INFO     | __main__:keyword_preview:1229 - LLM客户端初始化成功
+2026-01-21 20:41:31.604 | INFO     | __main__:keyword_preview:1233 - 搜索节点初始化成功
+2026-01-21 20:41:31.605 | INFO     | __main__:keyword_preview:1242 - 开始深度意图识别: 西贝和罗永浩事件
+2026-01-21 20:42:54.730 | INFO     | __main__:keyword_preview:1244 - 深度意图识别完成: {'search_query': '西贝罗永浩事件 到底怎么回事', 'reasoning': "选择按日期搜索工具可追踪事件发酵时间线，覆盖多平台真实讨论。搜索词'到底怎么回事'是网民常用口语表达，结合'西贝罗永浩事件'自然包含公众好奇、质疑等情绪，避开官方术语。设定一周时间范围(2026-01-14至2026-01-21)因舆情事件通常7天内热度最高，能捕捉最新民意动态并自动分析情感倾向。"}
