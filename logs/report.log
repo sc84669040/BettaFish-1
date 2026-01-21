@@ -1,0 +1,375 @@
+2026-01-18 15:46:47.633 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-18 15:46:49.424 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 15:46:49.424 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 15:46:49.425 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 15:46:49.425 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 3 个Engine可用
+2026-01-18 15:46:49.425 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 3 个LLM修复函数
+2026-01-18 15:46:49.427 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 15:46:49.428 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 15:46:49.428 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'siliconflow/Qwen2.5-72B-Instruct', 'model': 'siliconflow/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 15:46:49.428 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 15:46:49.522 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ╔════════════════════════════════════════════════════════════════╗
+║  ⚠️  PDF 导出依赖缺失                                                ║
+║                                                                ║
+║  📄 PDF 导出功能将不可用（其他功能不受影响）                                      ║
+║                                                                ║
+║  已尝试自动添加 GTK 路径: 未找到默认路径                                       ║
+║  🔍 若已安装仍报错：确认 Python 与 GTK 位数一致后重开终端                           ║
+║  未识别到的依赖: pango, gobject, gdk-pixbuf, cairo                    ║
+║  🪟 Windows 系统解决方案：                                             ║
+║                                                                ║
+║  步骤 1: 安装 GTK3 Runtime（宿主机执行）                                  ║
+║    下载页: README 中的 GTK3 Runtime 链接（建议默认路径）                      ║
+║                                                                ║
+║  步骤 2: 将 GTK 安装目录下的 bin 加入 PATH（需新终端）                          ║
+║    set PATH=C:\Program Files\GTK3-Runtime Win64\bin;%PATH%     ║
+║    自定义路径请替换，或设置环境变量 GTK_BIN_PATH                               ║
+║    可选: 永久添加 PATH 示例:                                           ║
+║      setx PATH "C:\Program Files\GTK3-Runtime Win64\bin;%PATH%"║
+║                                                                ║
+║  步骤 3: 验证（新终端执行）                                               ║
+║    python -m ReportEngine.utils.dependency_check               ║
+║    输出含 “✓ Pango 依赖检测通过” 即配置正确                                  ║
+║                                                                ║
+║  📖 文档：static/Partial README for PDF Exporting/README.md        ║
+╚════════════════════════════════════════════════════════════════╝
+2026-01-18 15:46:49.522 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 15:46:49.523 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:30:12.956 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-18 16:30:18.517 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 16:30:18.518 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 16:30:18.518 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 16:30:18.519 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 16:30:18.519 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 16:30:18.520 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 16:30:18.526 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 16:30:18.529 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 16:30:18.534 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 16:30:18.537 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 16:30:18.886 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ╔════════════════════════════════════════════════════════════════╗
+║  ⚠️  PDF 导出依赖缺失                                                ║
+║                                                                ║
+║  📄 PDF 导出功能将不可用（其他功能不受影响）                                      ║
+║                                                                ║
+║  已尝试自动添加 GTK 路径: 未找到默认路径                                       ║
+║  🔍 若已安装仍报错：确认 Python 与 GTK 位数一致后重开终端                           ║
+║  未识别到的依赖: pango, gobject, gdk-pixbuf, cairo                    ║
+║  🪟 Windows 系统解决方案：                                             ║
+║                                                                ║
+║  步骤 1: 安装 GTK3 Runtime（宿主机执行）                                  ║
+║    下载页: README 中的 GTK3 Runtime 链接（建议默认路径）                      ║
+║                                                                ║
+║  步骤 2: 将 GTK 安装目录下的 bin 加入 PATH（需新终端）                          ║
+║    set PATH=C:\Program Files\GTK3-Runtime Win64\bin;%PATH%     ║
+║    自定义路径请替换，或设置环境变量 GTK_BIN_PATH                               ║
+║    可选: 永久添加 PATH 示例:                                           ║
+║      setx PATH "C:\Program Files\GTK3-Runtime Win64\bin;%PATH%"║
+║                                                                ║
+║  步骤 3: 验证（新终端执行）                                               ║
+║    python -m ReportEngine.utils.dependency_check               ║
+║    输出含 “✓ Pango 依赖检测通过” 即配置正确                                  ║
+║                                                                ║
+║  📖 文档：static/Partial README for PDF Exporting/README.md        ║
+╚════════════════════════════════════════════════════════════════╝
+2026-01-18 16:30:18.888 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 16:30:18.891 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:30:18.891 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 开始串行清理子进程
+2026-01-18 16:30:18.892 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 insight (pid=40708)
+2026-01-18 16:30:18.892 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] insight 退出完成，returncode=1
+2026-01-18 16:30:18.893 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 media (pid=36028)
+2026-01-18 16:30:18.904 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] media 退出完成，returncode=1
+2026-01-18 16:30:18.905 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 query (pid=38952)
+2026-01-18 16:30:18.918 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] query 退出完成，returncode=1
+2026-01-18 16:30:18.921 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:30:18.967 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:30:18.968 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 子进程清理完成
+2026-01-18 16:30:18.968 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:30:18.969 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:30:43.105 | INFO     | MindSpider.main:__init__:44 - MindSpider AI爬虫项目
+2026-01-18 16:30:43.106 | INFO     | MindSpider.main:__init__:45 - 项目路径: F:\traeproject\BettaFish\BettaFish\MindSpider
+2026-01-18 16:30:43.107 | INFO     | MindSpider.main:initialize_database:141 - 初始化数据库...
+2026-01-18 16:30:44.931 | ERROR    | MindSpider.main:initialize_database:161 - 数据库初始化失败: Traceback (most recent call last):
+  File "F:\traeproject\BettaFish\BettaFish\MindSpider\schema\init_database.py", line 118, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\86185\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "C:\Users\86185\AppData\Local\Programs\Python\Python313\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\86185\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "F:\traeproject\BettaFish\BettaFish\MindSpider\schema\init_database.py", line 102, in main
+    engine = create_async_engine(database_url, pool_pre_ping=True, pool_recycle=1800)
+  File "C:\Users\86185\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\ext\asyncio\engine.py", line 120, in create_async_engine
+    sync_engine = _create_engine(url, **kw)
+  File "<string>", line 2, in create_engine
+  File "C:\Users\86185\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\86185\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 617, in create_engine
+    dbapi = dbapi_meth(**dbapi_args)
+  File "C:\Users\86185\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 1094, in import_dbapi
+    return AsyncAdapt_asyncpg_dbapi(__import__("asyncpg"))
+                                    ~~~~~~~~~~^^^^^^^^^^^
+ModuleNotFoundError: No module named 'asyncpg'
+
+2026-01-18 16:30:44.933 | ERROR    | __main__:initialize_system_components:285 - 数据库初始化失败
+2026-01-18 16:30:44.934 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:30:44.935 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:30:46.990 | WARNING  | __main__:wait_for_app_startup:807 - insight 健康检查失败: HTTPConnectionPool(host='127.0.0.1', port=8501): Max retries exceeded with url: /_stcore/health (Caused by ConnectTimeoutError(<HTTPConnection(host='127.0.0.1', port=8501) at 0x20fab7c4170>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+2026-01-18 16:30:50.009 | WARNING  | __main__:wait_for_app_startup:807 - media 健康检查失败: HTTPConnectionPool(host='127.0.0.1', port=8502): Max retries exceeded with url: /_stcore/health (Caused by ConnectTimeoutError(<HTTPConnection(host='127.0.0.1', port=8502) at 0x20fab76d260>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+2026-01-18 16:30:53.078 | WARNING  | __main__:wait_for_app_startup:807 - query 健康检查失败: HTTPConnectionPool(host='127.0.0.1', port=8503): Max retries exceeded with url: /_stcore/health (Caused by ConnectTimeoutError(<HTTPConnection(host='127.0.0.1', port=8503) at 0x20fa9693f00>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+2026-01-18 16:30:54.433 | INFO     | __main__:start_forum_engine:380 - ForumEngine: 启动论坛...
+2026-01-18 16:30:54.467 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 3): logs/report.log
+2026-01-18 16:30:54.467 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 3): logs/report.log
+2026-01-18 16:31:00.203 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 16:31:00.203 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 16:31:00.204 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 16:31:00.204 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 16:31:00.205 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 16:31:00.205 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 16:31:00.208 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 16:31:00.208 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 16:31:00.209 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 16:31:00.209 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 16:31:00.209 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 16:31:00.209 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 16:31:00.216 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 16:31:00.216 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 16:31:00.219 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 16:31:00.219 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 16:31:00.219 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 16:31:00.219 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 16:31:00.235 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 16:31:00.235 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 16:31:00.524 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ╔════════════════════════════════════════════════════════════════╗
+║  ⚠️  PDF 导出依赖缺失                                                ║
+║                                                                ║
+║  📄 PDF 导出功能将不可用（其他功能不受影响）                                      ║
+║                                                                ║
+║  已尝试自动添加 GTK 路径: 未找到默认路径                                       ║
+║  🔍 若已安装仍报错：确认 Python 与 GTK 位数一致后重开终端                           ║
+║  未识别到的依赖: pango, gobject, gdk-pixbuf, cairo                    ║
+║  🪟 Windows 系统解决方案：                                             ║
+║                                                                ║
+║  步骤 1: 安装 GTK3 Runtime（宿主机执行）                                  ║
+║    下载页: README 中的 GTK3 Runtime 链接（建议默认路径）                      ║
+║                                                                ║
+║  步骤 2: 将 GTK 安装目录下的 bin 加入 PATH（需新终端）                          ║
+║    set PATH=C:\Program Files\GTK3-Runtime Win64\bin;%PATH%     ║
+║    自定义路径请替换，或设置环境变量 GTK_BIN_PATH                               ║
+║    可选: 永久添加 PATH 示例:                                           ║
+║      setx PATH "C:\Program Files\GTK3-Runtime Win64\bin;%PATH%"║
+║                                                                ║
+║  步骤 3: 验证（新终端执行）                                               ║
+║    python -m ReportEngine.utils.dependency_check               ║
+║    输出含 “✓ Pango 依赖检测通过” 即配置正确                                  ║
+║                                                                ║
+║  📖 文档：static/Partial README for PDF Exporting/README.md        ║
+╚════════════════════════════════════════════════════════════════╝
+2026-01-18 16:31:00.524 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ╔════════════════════════════════════════════════════════════════╗
+║  ⚠️  PDF 导出依赖缺失                                                ║
+║                                                                ║
+║  📄 PDF 导出功能将不可用（其他功能不受影响）                                      ║
+║                                                                ║
+║  已尝试自动添加 GTK 路径: 未找到默认路径                                       ║
+║  🔍 若已安装仍报错：确认 Python 与 GTK 位数一致后重开终端                           ║
+║  未识别到的依赖: pango, gobject, gdk-pixbuf, cairo                    ║
+║  🪟 Windows 系统解决方案：                                             ║
+║                                                                ║
+║  步骤 1: 安装 GTK3 Runtime（宿主机执行）                                  ║
+║    下载页: README 中的 GTK3 Runtime 链接（建议默认路径）                      ║
+║                                                                ║
+║  步骤 2: 将 GTK 安装目录下的 bin 加入 PATH（需新终端）                          ║
+║    set PATH=C:\Program Files\GTK3-Runtime Win64\bin;%PATH%     ║
+║    自定义路径请替换，或设置环境变量 GTK_BIN_PATH                               ║
+║    可选: 永久添加 PATH 示例:                                           ║
+║      setx PATH "C:\Program Files\GTK3-Runtime Win64\bin;%PATH%"║
+║                                                                ║
+║  步骤 3: 验证（新终端执行）                                               ║
+║    python -m ReportEngine.utils.dependency_check               ║
+║    输出含 “✓ Pango 依赖检测通过” 即配置正确                                  ║
+║                                                                ║
+║  📖 文档：static/Partial README for PDF Exporting/README.md        ║
+╚════════════════════════════════════════════════════════════════╝
+2026-01-18 16:31:00.525 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 16:31:00.525 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 16:31:00.526 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:31:00.526 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:31:00.527 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 开始串行清理子进程
+2026-01-18 16:31:00.527 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 开始串行清理子进程
+2026-01-18 16:31:00.527 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 insight (pid=39548)
+2026-01-18 16:31:00.527 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 insight (pid=39548)
+2026-01-18 16:31:00.529 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] insight 退出完成，returncode=1
+2026-01-18 16:31:00.529 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] insight 退出完成，returncode=1
+2026-01-18 16:31:00.530 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 media (pid=37904)
+2026-01-18 16:31:00.530 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 media (pid=37904)
+2026-01-18 16:31:00.540 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] media 退出完成，returncode=1
+2026-01-18 16:31:00.540 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] media 退出完成，returncode=1
+2026-01-18 16:31:00.541 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 query (pid=40044)
+2026-01-18 16:31:00.541 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 query (pid=40044)
+2026-01-18 16:31:00.550 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] query 退出完成，returncode=1
+2026-01-18 16:31:00.550 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] query 退出完成，returncode=1
+2026-01-18 16:31:00.551 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:31:00.551 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:31:01.491 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:31:01.491 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:31:01.492 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 子进程清理完成
+2026-01-18 16:31:01.492 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 子进程清理完成
+2026-01-18 16:31:01.493 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:31:01.493 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:31:01.494 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:31:01.494 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:48:05.748 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-18 16:48:10.135 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 16:48:10.136 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 16:48:10.137 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 16:48:10.138 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 16:48:10.138 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 16:48:10.138 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 16:48:10.141 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 16:48:10.144 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 16:48:10.144 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 16:48:10.145 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 16:48:10.429 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-18 16:48:10.430 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 16:48:10.431 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:48:10.431 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 开始串行清理子进程
+2026-01-18 16:48:10.431 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 insight (pid=25212)
+2026-01-18 16:48:10.431 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] insight 退出完成，returncode=1
+2026-01-18 16:48:10.432 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 media (pid=31704)
+2026-01-18 16:48:10.439 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] media 退出完成，returncode=1
+2026-01-18 16:48:10.439 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 query (pid=26480)
+2026-01-18 16:48:10.440 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] query 退出完成，returncode=1
+2026-01-18 16:48:10.441 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:48:10.761 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:48:10.761 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 子进程清理完成
+2026-01-18 16:48:10.762 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:48:10.762 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:48:17.843 | INFO     | MindSpider.main:__init__:44 - MindSpider AI爬虫项目
+2026-01-18 16:48:17.844 | INFO     | MindSpider.main:__init__:45 - 项目路径: F:\traeproject\BettaFish\BettaFish\MindSpider
+2026-01-18 16:48:17.844 | INFO     | MindSpider.main:initialize_database:141 - 初始化数据库...
+2026-01-18 16:48:18.666 | INFO     | MindSpider.main:initialize_database:158 - 数据库初始化成功
+2026-01-18 16:48:18.666 | INFO     | __main__:initialize_system_components:283 - 数据库初始化成功
+2026-01-18 16:48:18.666 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:48:18.666 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:48:20.675 | WARNING  | __main__:wait_for_app_startup:807 - insight 健康检查失败: HTTPConnectionPool(host='127.0.0.1', port=8501): Max retries exceeded with url: /_stcore/health (Caused by ConnectTimeoutError(<HTTPConnection(host='127.0.0.1', port=8501) at 0x25ae6d51cd0>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+2026-01-18 16:48:23.698 | WARNING  | __main__:wait_for_app_startup:807 - media 健康检查失败: HTTPConnectionPool(host='127.0.0.1', port=8502): Max retries exceeded with url: /_stcore/health (Caused by ConnectTimeoutError(<HTTPConnection(host='127.0.0.1', port=8502) at 0x25ae6d52060>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+2026-01-18 16:48:26.720 | WARNING  | __main__:wait_for_app_startup:807 - query 健康检查失败: HTTPConnectionPool(host='127.0.0.1', port=8503): Max retries exceeded with url: /_stcore/health (Caused by ConnectTimeoutError(<HTTPConnection(host='127.0.0.1', port=8503) at 0x25ae6d78170>, 'Connection to 127.0.0.1 timed out. (connect timeout=2)'))
+2026-01-18 16:48:27.720 | INFO     | __main__:start_forum_engine:380 - ForumEngine: 启动论坛...
+2026-01-18 16:48:27.731 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 3): logs/report.log
+2026-01-18 16:48:27.731 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 3): logs/report.log
+2026-01-18 16:48:29.672 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 16:48:29.672 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 16:48:29.672 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 16:48:29.672 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 16:48:29.672 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 16:48:29.672 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 16:48:29.672 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 16:48:29.672 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 16:48:29.672 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 16:48:29.672 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 16:48:29.672 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 16:48:29.672 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 16:48:29.674 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 16:48:29.674 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 16:48:29.674 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 16:48:29.674 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 16:48:29.675 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 16:48:29.675 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 16:48:29.681 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 16:48:29.681 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 16:48:29.723 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-18 16:48:29.723 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-18 16:48:29.723 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 16:48:29.723 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 16:48:29.724 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:48:29.724 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:48:29.724 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 开始串行清理子进程
+2026-01-18 16:48:29.724 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 开始串行清理子进程
+2026-01-18 16:48:29.724 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] insight 未运行，跳过停止
+2026-01-18 16:48:29.724 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] insight 未运行，跳过停止
+2026-01-18 16:48:29.724 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] media 未运行，跳过停止
+2026-01-18 16:48:29.724 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] media 未运行，跳过停止
+2026-01-18 16:48:29.724 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] query 未运行，跳过停止
+2026-01-18 16:48:29.724 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] query 未运行，跳过停止
+2026-01-18 16:48:29.724 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:48:29.724 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:48:29.732 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:48:29.732 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:48:29.732 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 子进程清理完成
+2026-01-18 16:48:29.732 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 子进程清理完成
+2026-01-18 16:48:29.732 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:48:29.732 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:48:29.733 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:48:29.733 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:54:11.194 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-18 16:54:16.044 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 16:54:16.045 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 16:54:16.045 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 16:54:16.046 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 16:54:16.046 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 16:54:16.047 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 16:54:16.052 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 16:54:16.057 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 16:54:16.062 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 16:54:16.064 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 16:54:16.349 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-18 16:54:16.350 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 16:54:16.350 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:54:16.351 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 开始串行清理子进程
+2026-01-18 16:54:16.351 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] insight 未运行，跳过停止
+2026-01-18 16:54:16.352 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] media 未运行，跳过停止
+2026-01-18 16:54:16.352 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] query 未运行，跳过停止
+2026-01-18 16:54:16.353 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:54:17.270 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:54:17.288 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 子进程清理完成
+2026-01-18 16:54:17.310 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:54:17.328 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:56:48.302 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-18 16:56:53.099 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 16:56:53.100 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 16:56:53.100 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 16:56:53.101 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 16:56:53.101 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 16:56:53.102 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 16:56:53.106 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 16:56:53.109 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 16:56:53.110 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 16:56:53.111 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 16:56:53.258 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-18 16:56:53.259 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 16:56:53.259 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md
+2026-01-18 16:56:53.260 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 开始串行清理子进程
+2026-01-18 16:56:53.260 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] insight 未运行，跳过停止
+2026-01-18 16:56:53.260 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 media (pid=26572)
+2026-01-18 16:56:53.265 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] media 退出完成，returncode=1
+2026-01-18 16:56:53.270 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 正在停止 query (pid=35752)
+2026-01-18 16:56:53.275 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] query 退出完成，returncode=1
+2026-01-18 16:56:53.276 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:56:53.316 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 16:56:53.316 | INFO     | __main__:_log_shutdown_step:525 - [Shutdown] 子进程清理完成
+2026-01-18 16:56:53.316 | INFO     | __main__:stop_forum_engine:392 - ForumEngine: 停止论坛...
+2026-01-18 16:56:53.318 | INFO     | __main__:stop_forum_engine:394 - ForumEngine: 论坛已停止
+2026-01-18 17:08:19.658 | DEBUG    | ReportEngine.agent:_setup_logging:325 - 已添加日志handler (ID: 1): logs/report.log
+2026-01-18 17:08:24.319 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:413 - 已添加ReportEngine图表修复函数
+2026-01-18 17:08:24.319 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:447 - 已添加ForumEngine图表修复函数
+2026-01-18 17:08:24.320 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:481 - 已添加InsightEngine图表修复函数
+2026-01-18 17:08:24.320 | DEBUG    | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:515 - 已添加MediaEngine图表修复函数
+2026-01-18 17:08:24.320 | INFO     | ReportEngine.utils.chart_repair_api:create_llm_repair_functions:520 - 图表API修复功能已启用，共 4 个Engine可用
+2026-01-18 17:08:24.320 | INFO     | ReportEngine.renderers.html_renderer:__init__:126 - HTMLRenderer: 已配置 4 个LLM修复函数
+2026-01-18 17:08:24.325 | INFO     | ReportEngine.agent:initialize_baseline:132 - 文件数量基准已初始化: {'insight': 3, 'media': 3, 'query': 3}
+2026-01-18 17:08:24.327 | INFO     | ReportEngine.agent:__init__:251 - Report Agent已初始化
+2026-01-18 17:08:24.327 | INFO     | ReportEngine.agent:__init__:252 - 使用LLM: {'provider': 'deepseek-ai/Qwen2.5-72B-Instruct', 'model': 'deepseek-ai/Qwen2.5-72B-Instruct', 'api_base': 'https://api.siliconflow.cn/v1'}
+2026-01-18 17:08:24.327 | INFO     | ReportEngine.flask_interface:initialize_report_engine:258 - Report Engine初始化成功
+2026-01-18 17:08:24.462 | WARNING  | ReportEngine.utils.dependency_check:log_dependency_status:334 - ⚠ WeasyPrint 未安装
+解决方法: pip install weasyprint
+2026-01-18 17:08:24.463 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:335 - 💡 提示：PDF 导出功能需要 Pango 库支持，但不影响系统其他功能的正常使用
+2026-01-18 17:08:24.463 | INFO     | ReportEngine.utils.dependency_check:log_dependency_status:336 - 📚 安装说明请参考：static/Partial README for PDF Exporting/README.md

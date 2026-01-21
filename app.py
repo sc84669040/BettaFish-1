@@ -40,7 +40,14 @@ except ImportError as e:
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'Dedicated-to-creating-a-concise-and-versatile-public-opinion-analysis-platform'
-socketio = SocketIO(app, cors_allowed_origins="*")
+
+# 在Python 3.13中强制使用threading模式，避免eventlet兼容性问题
+import sys
+if sys.version_info >= (3, 13):
+    socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')
+    logger.info("Python 3.13检测到，强制使用threading模式")
+else:
+    socketio = SocketIO(app, cors_allowed_origins="*")
 
 # eventlet 在客户端主动断开时偶尔会抛出 ConnectionAbortedError，这里做一次防御性包裹，
 # 避免无意义的堆栈污染日志（仅在 eventlet 可用时启用）。
@@ -73,7 +80,12 @@ def _patch_eventlet_disconnect_logging():
     eventlet.wsgi.HttpProtocol.finish = _safe_finish  # type: ignore[attr-defined]
     logger.info("已对 eventlet 连接中断进行安全防护")
 
-_patch_eventlet_disconnect_logging()
+# 在Python 3.13中禁用eventlet支持，避免ssl兼容性问题
+import sys
+if sys.version_info >= (3, 13):
+    logger.info("Python 3.13检测到，禁用eventlet支持")
+else:
+    _patch_eventlet_disconnect_logging()
 
 # 注册ReportEngine Blueprint
 if REPORT_ENGINE_AVAILABLE:
@@ -767,7 +779,7 @@ def check_app_status():
                 try:
                     response = requests.get(
                         _build_healthcheck_url(info['port']),
-                        timeout=2,
+                        timeout=10,
                         proxies=HEALTHCHECK_PROXIES
                     )
                     if response.status_code == 200:
@@ -797,7 +809,7 @@ def wait_for_app_startup(app_name, max_wait_time=90):
         try:
             response = requests.get(
                 _build_healthcheck_url(info['port']),
-                timeout=2,
+                timeout=10,
                 proxies=HEALTHCHECK_PROXIES
             )
             if response.status_code == 200:

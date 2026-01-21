@@ -1,0 +1,28 @@
+# 核心Web框架依赖
+flask==2.3.3
+flask-socketio==5.3.6
+python-socketio==5.8.0
+eventlet==0.33.3
+
+# HTTP请求和异步
+requests==2.31.0
+
+# 数据处理基础
+pandas>=2.0.0
+numpy>=1.24.0
+jieba==0.42.1
+
+# 数据库
+pymysql==1.1.0
+redis>=4.6.0
+SQLAlchemy==2.0.35
+
+# 工具库
+python-dotenv>=1.0.0
+loguru>=0.7.0
+pydantic==2.5.2
+pydantic-settings==2.2.1
+
+# 日志和配置
+loguru>=0.7.0
+python-dotenv>=1.0.0

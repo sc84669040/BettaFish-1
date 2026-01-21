@@ -1,0 +1,15 @@
+[17:08:14] 启动 media 应用...
+[17:08:15] 2026-01-18 17:08:15.445
+[17:08:15] Warning: the config option 'server.enableCORS=false' is not compatible with
+[17:08:15] 'server.enableXsrfProtection=true'.
+[17:08:15] As a result, 'server.enableCORS' is being overridden to 'true'.
+[17:08:15] More information:
+[17:08:15] In order to protect against CSRF attacks, we send a cookie with each request.
+[17:08:15] To do so, we must specify allowable origins, which places a restriction on
+[17:08:15] cross-origin resource sharing.
+[17:08:15] If cross origin resource sharing is required, please disable server.enableXsrfProtection.
+[17:08:17] You can now view your Streamlit app in your browser.
+[17:08:17] Local URL: http://localhost:8502
+[17:08:17] Network URL: http://192.168.5.47:8502
+[17:08:17] External URL: http://64.23.220.84:8502
+[17:39:00] 2026-01-18 17:39:00.549 | ERROR    | __main__:main:130 - 请在您的环境变量中设置ANSPIRE_API_KEY
